@@ -1,0 +1,266 @@
+.main {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    position :relative;
+    overflow: scroll;
+    background: #F6F6F7;
+}
+
+    .main a.shortcut {
+        display: inline-block;
+        padding: 7px;
+        font-size: 16px;
+        border-radius: 3px;
+        color: #CAD3DB;
+        position: absolute;
+        right: 20px;
+    }
+
+    .main a.shortcut span { color: #CAD3DB; }
+    .main a.shortcut:hover { /* background: #C0CBD4; */ }
+
+
+    .main .pre-header {
+        color: white;
+        padding: 10px;
+        font-size:11px;
+        background: #58B4CB;
+        font-weight: 200;
+        border-bottom: 3px solid #EFF0F1;
+    }
+
+    .main .pre-header strong {
+        color: white;
+    }
+
+    .main .pre-header a.back {
+        margin-right: 10px;
+        color: white;
+        text-decoration: none;
+    }
+
+        .main .pre-header a.back span { color: white; }
+
+    .main .header {
+        color: #aaa;
+        padding: 10px;
+        font-size:18px;
+        position: relative;
+        font-weight: 200;
+    }
+
+        .main .header .inner {
+            background: white;
+            border-bottom: 3px solid #EFF0F1;
+        }
+        .main .header .inner  input[type="text"] {
+            width: 50%;
+            padding-left: 10px;
+            font-size: 14px;
+            font-weight: 100;
+            color: #58B4CB;
+        }
+
+        .main .header .inner input[type="button"],
+        .main .header .inner input[type="submit"] {
+            background: none;
+            color: #bbb;
+            float: right;
+            position: relative;
+            text-transform: uppercase;
+            top: -5px;
+            right: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+
+    .main h1 {
+        color: #58B4CB;
+        font-weight: 200;
+        font-size: 30px;
+        padding: 0px 20px 0px 20px;
+        display: block;
+        position: relative;
+    }
+
+    .main h2 {
+        color: #b2bbbc;
+        font-weight: normal;
+        font-size: 18px;
+        padding: 0px 30px 30px 30px;
+        position: relative;
+        margin-top: -20px;
+    }
+
+
+
+    .main h3 {
+        color: #b2bbbc;
+        font-weight: normal;
+        font-size: 8px;
+        border: 1px solid #b2bbbc;
+        width: auto;
+        display: inline-block;
+        padding: 5px;
+        border-radius: 10px;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .main h1 a.highlight,
+    .main h2 a.highlight {
+        background: #CA472A;
+        color: white;
+        border-radius: 5px;
+        font-size: 10px;
+        padding: 4px 7px 3px 7px;
+        text-transform: uppercase;
+        position: relative;
+        top: -2px;
+        left:10px;
+    }
+
+    .main h1 a.highlight span.fa,
+    .main h2 a.highlight span.fa {
+        color: white;
+        margin-right: 5px;
+    }
+
+    .main .primary {
+        width: 60%;
+        display: inline-block;
+        float: left;
+    }
+
+    .main .secondary {
+        width: 40%;
+        height: 100%;
+        display: inline-block;
+        float: right;
+    }
+
+    .main .primary.full { width: 100%; }
+    .main .primary.large { width: 70%; }
+    .main .secondary.small { width: 30%; }
+
+        .main .panel {
+            background: white;
+            margin: 10px;
+            border-left: 3px solid #EFF0F1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .main .panel .heading {
+            background: #CA472A;
+            position: relative;
+            border-radius: 3px 3px 0px 0px;
+        }
+
+        .main .panel .heading h2,
+        .main .panel .heading input[type="text"] {
+            margin: 0px;
+            vertical-align: middle;
+            text-align: left;
+            height: auto;
+            position: relative;
+            font-size: 16px;
+            padding:15px;
+            font-weight: normal;
+            color: #2D3F4D;
+            background: #FCFCFC;
+            border-radius: 3px 3px 0px 0px;
+            border-bottom: 1px solid #EFEFEF;
+        }
+
+        .main .panel .heading input.add-activities {
+            font-size: 10px;
+            float: right;
+            position: relative;
+            top: -7px;
+            background: none;
+            border: 1px solid #b2bbbc;
+            padding: 5px;
+            cursor: pointer;
+            color: #b2bbbc;
+        }
+
+
+            .main .panel .heading ul.tools {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                width: 100%;
+                height: 100%;
+            }
+
+            .main .panel .heading ul.tools li {
+                float: right;
+                display: inline-block;
+                padding: 12px 12px 12px 0px;
+            }
+
+            .main .panel .heading ul.tools li a {
+                color: #949c9e;
+                font-size: 10px;
+            }
+
+            .main .panel .heading ul.tools li a span {
+                color: #949c9e;
+                margin-right: 5px;
+            }
+
+            .main .panel .heading ul.tools li a:hover,
+            .main .panel .heading ul.tools li a:hover span {
+                color: #549c9e;
+            }
+
+        .main .panel ul.activities {
+            border-bottom: 2px solid #EFF0F1;
+        }
+
+
+            .main .panel ul.activities li {
+                padding: 10px;
+                color: #949c9e;
+                font-size: 12px;
+                position: relative;
+            }
+
+            .main .panel ul.activities li:hover {
+                background: #FAFAFA;
+            }
+
+            .main .panel ul.activities li a {
+                text-decoration: underline;
+                color: #949c9e;
+            }
+
+            .main .panel ul.activities li span.line-top {
+                border-left: 2px solid #949c9e;
+                position: absolute;
+                left: 16px;
+                top: 0px;
+                height: 13px;
+            }
+
+            .main .panel ul.activities li span.line-bottom {
+                border-left: 2px solid #949c9e;
+                position: absolute;
+                left: 16px;
+                bottom: 0px;
+                height: 13px;
+            }
+
+            .main .panel ul.activities li:first-child span.line-top { display: none; }
+            .main .panel ul.activities li:last-child span.line-bottom { display: none; }
+
+            .main .panel ul.activities li span.fa.fa-check-circle-o {
+                color: #949c9e;
+                margin-right: 10px;
+                font-size:16px;
+                position: relative;
+                top: 1px;
+            }

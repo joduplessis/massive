@@ -1,0 +1,84 @@
+<template name="PathView">
+    <div class="navigation">
+        {{> Navigation }}
+    </div>
+    <div class="main">
+        <form>
+            <div class="pre-header">
+                <a href="javascript:window.history.back();" class="back"><span class="fa fa-chevron-left"></span> Go back</a> <strong>{{title}} </strong>
+            </div>
+            <div class="header">
+                <div class="inner">
+                    <input type="text" name="title" value="{{title}}"/>
+                    <input type="submit" value="Save" />
+                </div>
+            </div>
+            <div class="primary">
+                <div class="panel">
+                    <div class="heading"><h2>Description</h2></div>
+                    <div class="padding">
+                        <textarea name="description">{{description}}</textarea>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="heading">
+                        <h2>Activities
+                            <input type="button" value="Add activity" id="add-activities" class="add-activities"/>
+                            <input type="hidden" value="Activities title" id="add-activities-text" />
+                        </h2>
+                    </div>
+                    <div id="activities-container">
+                        <ul class="activities">
+                            {{#each activities}}
+                                <li>
+                                    <span class="fa fa-check-circle-o"></span>
+                                    <span class="line-top"></span>
+                                    <span class="line-bottom"></span>
+                                    <a href="javascript:void(0)" id="edit-activities" data-id="{{this._id}}">{{this.title}}</a>
+                                    <div style="position: absolute; right: 10px; top: 0px; height:30px; width: 300px;">
+                                        <canvas id="overview{{this._id}}" height="30" width="300"></canvas>
+                                    </div>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="secondary">
+                <div class="panel">
+                    <div class="heading"><h2>Player activity</h2></div>
+                    <div class="padding">
+                        <div style="margin: 0px 0px 0px 0px;"><canvas id="overview" height="50"></canvas></div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="heading"><h2>Rewards</h2></div>
+                    <div class="padding">
+                        <table width="100%" class="reward">
+                            {{#each attributes}}
+                                <tr>
+                                    <td>{{this.title}}</td>
+                                    <td width="70%"><div id="slider_{{this.title}}" data-for="{{this.title}}"></div></td>
+                                    <td align="right"><span id="value_{{this.title}}">0</span></td>
+                                </tr>
+                            {{/each}}
+                        </table>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="heading"><h2>Image</h2></div>
+                    <div class="padding">
+                        {{#each media}}
+                            {{#if isImage filename=file}}
+                                <a href="#" id="path-image" data-id="{{_id}}" data-file="{{file}}" class="path-image">
+                                    <img src="http://joduplessis.com/massive/{{file}}" height="50" width="50"/>
+                                </a>
+                            {{/if}}
+                        {{/each}}
+                        <br style="clear:both;"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</template>

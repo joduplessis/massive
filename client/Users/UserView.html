@@ -1,0 +1,54 @@
+<template name="UserView">
+    <div class="navigation">
+        {{> Navigation }}
+    </div>
+    <div class="main">
+        <div class="pre-header">
+            <a href="javascript:window.history.back();" class="back"><span class="fa fa-chevron-left"></span> Go back</a> <strong>User data is synced with Active Directory.</strong>
+        </div>
+        <div class="header">
+            <div class="inner">
+                <input type="text" name="title" value="{{user.fullname}}" disabled/>
+            </div>
+        </div>
+        <form>
+            <div class="primary">
+                <div class="panel">
+                    <div class="heading">
+                        <h2>{{user.email}}</h2>
+                    </div>
+                    <div class="padding">
+                        <select name="role" id="role">
+                            {{#each role}}
+                                <option value="{{this}}">{{this}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <tr>
+                            <th>Avatar</th>
+                            <th>Playname</th>
+                            <th>Fullname</th>
+                        </tr>
+                        <tr>
+                            <td>{{user.avatar}}</td>
+                            <td>{{user.playname}}</td>
+                            <td>{{user.fullname}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="padding">
+                    <input type="submit" value="Update" />
+                </div>
+            </div>
+            <div class="secondary">
+                <div class="panel">
+                    <div class="heading">
+                        <h2>Attributes</h2>
+                    </div>
+                    <div style="margin: 20px 20px 20px 20px;"><canvas id="overview" height="200"></canvas></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</template>

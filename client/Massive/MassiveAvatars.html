@@ -1,0 +1,26 @@
+<template name="MassiveAvatars">
+    <div class="navigation">
+        {{> Navigation }}
+    </div>
+    <div class="main">
+        <div class="pre-header">
+            These are read only values the platform uses. To adjust any of these, please contact your Massive agent.
+        </div>
+        <div class="header">
+            <div class="inner">
+                <input type="text" name="title" value="Player Avatars" disable/>
+            </div>
+        </div>
+        <div class="primary full">
+            <div class="panel">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    {{#each avatars}}
+                    <tr>
+                        <td>{{sentenceCase object=this }}</td>
+                    </tr>
+                    {{/each}}
+                </table>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,113 @@
+
+    .navigation {
+        height: 55px;
+        width: 100%;
+        margin-right: 0px;
+        position :relative;
+        overflow: hidden;
+        background: #2A3B48;
+    }
+
+            .navigation img.game-logo {
+                height: 50px;
+                width: auto;
+                padding: 10px;
+                background: #2A3B48;
+                display: block;
+            }
+
+
+
+        .navigation h1 {
+            color: #5C6774;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 0px 0px 0px 30px;
+            position: relative;
+        }
+
+        .navigation ul {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        .navigation ul li {
+            display:block;
+            padding: 5px;
+            margin-left: 10px;
+            float:left;
+        }
+
+        .navigation ul li a {
+            color: #CFD7DE;
+            font-size: 15px;
+            padding: 0px;
+            display:block;
+            font-weight: 300;
+        }
+
+        .navigation ul li a:hover,
+        .navigation ul li a:hover span.fa {
+            color: #B9C5CF;
+            text-decoration: none;
+        }
+
+        .navigation ul li a span.count {
+            background: #3B5367;
+            color: #58B4CB;
+            padding: 2px 6px 2px 6px;
+            position: relative;
+            left: 5px;
+            font-size: 10px;
+            border-radius: 20px;
+            font-weight: 400;
+            top: 0px;
+        }
+
+        .navigation ul li a span.fa {
+            color: #CFD7DE;
+            margin-right: 5px;
+            width: 15px;
+            font-size: 14px;
+        }
+
+        .navigation ul li.selected a { color: #6cb4c2 }
+        .navigation ul li.dim a { color: #b5bcbe; }
+        .navigation ul li.delete a { color:#a82b2b; }
+        .navigation ul li.delete a span.fa { color:#a82b2b; }
+
+
+    .navigation .footer {
+        position: absolute;
+        bottom: 0px;
+        height: 70px;
+        left: 0px;
+        width: 100%;
+        background: #2E404D;
+    }
+
+        .navigation .footer a.name {
+            color: #58B4CB;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-block;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .navigation .footer a.details {
+            color: #5D7490;
+            font-size: 8px;
+            display: inline-block;
+            position: absolute;
+            bottom: 15px;
+            left: 20px;
+            font-weight: 400;
+            clear: both;
+        }
+
+            .navigation .footer a.details strong {
+                color: #5D7490;
+            }

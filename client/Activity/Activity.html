@@ -1,0 +1,53 @@
+<template name="Activity">
+    <div class="navigation">
+        {{> Navigation }}
+    </div>
+    <div class="main">
+        <div class="pre-header">
+            Welcome to the Massive dashboard. This is an overview of player activity.
+        </div>
+        <div class="header">
+            <div class="inner">
+                <input type="text" value="Dashboard" disabled/>
+                <input type="button" value="Paths" id="course" />
+                <input type="button" value="Badges" id="badge" />
+                <input type="button" value="Maps" id="map" />
+                <input type="button" value="Media" id="media" />
+            </div>
+        </div>
+        <div class="primary">
+            <div class="panel">
+                <div class="heading">
+                    <h2>Player activity</h2>
+                </div>
+                <div style="margin: 20px 20px 20px 20px;"><canvas id="overview" height="200"></canvas></div>
+            </div>
+            <div class="panel">
+                <div class="heading">
+                    <h2>Attribute activity</h2>
+                </div>
+                <div style="margin: 20px 20px 20px 20px;"><canvas id="attributes" height="200"></canvas></div>
+            </div>
+        </div>
+        <div class="secondary">
+            <div class="panel">
+                <div class="heading">
+                    <h2>Most popular paths</h2>
+                </div>
+                <div style="margin: 20px 20px 20px 20px;"><canvas id="demo1" height="200"></canvas></div>
+            </div>
+            <div class="panel">
+                <div class="heading">
+                    <h2>Most popular badges</h2>
+                </div>
+                <div style="margin: 20px 20px 20px 20px;"><canvas id="demo2" height="200"></canvas></div>
+            </div>
+            <div class="panel">
+                <div class="heading">
+                    <h2>Most popular maps</h2>
+                </div>
+                <div style="margin: 20px 20px 20px 20px;"><canvas id="demo3" height="200"></canvas></div>
+            </div>
+        </div>
+    </div>
+</template>

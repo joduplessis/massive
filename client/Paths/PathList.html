@@ -1,0 +1,58 @@
+<template name="PathList">
+    <div class="navigation">
+        {{> Navigation }}
+    </div>
+    <div class="main">
+        <div class="pre-header">
+            Paths are groups of activities the player needs to complete to gain points. They can be thought of as missions, courses, lessons or learning paths.
+        </div>
+        <div class="header">
+            <div class="inner">
+                <input type="text" value="New path" id="add-path-text" />
+                <input type="button" value="Add" id="add-path-add" />
+            </div>
+        </div>
+        <h1>Paths</h1>
+        <div class="primary full">
+            <div class="panel">
+                {{#if size}}
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <tr>
+                            <th></th>
+                            <th>Path</th>
+                            <th>Description</th>
+                            <th>Activities</th>
+                            <th>Created</th>
+                            <th width="90"></th>
+                        </tr>
+                        {{#each rows}}
+                        <tr>
+                            <td><span class="profile-pic"><img src="{{image}}"/></span></td>
+                            <td><strong>{{title}}</strong></td>
+                            <td>{{description}}</td>
+                            <td>{{activities.length}}</td>
+                            <td>{{shortenDateObject object=createdAt}}</td>
+                            <td align="right">
+                                <a href="javascript:void(0)" id="view" data-id="{{_id}}" class="button"><span class="fa fa-edit"></span></a>
+                                <a href="javascript:void(0)" id="delete" data-id="{{_id}}" class="button delete"><span class="fa fa-trash-o"></span></a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </table>
+                {{else}}
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="noresults">
+                        <tr><td>Sorry, there are player paths yet.</td></tr>
+                    </table>
+                {{/if}}
+            </div>
+            <div class="panel">
+                <div class="heading">
+                    <h2>Import SCORM content</h2>
+                </div>
+                <div class="padding">
+                    <input type="file" class="button"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

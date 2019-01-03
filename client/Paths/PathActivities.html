@@ -1,0 +1,98 @@
+<template name="PathActivities">
+    <div class="navigation">
+        {{> Navigation }}
+    </div>
+    <div class="properties-container">
+        <div id="properties">
+            <h3>Formatting</h3>
+            <div class="collapsible-content formatting">
+                <a href="#"><span class="fa fa-italic" id="italic"></span></a>
+                <a href="#"><span class="fa fa-bold" id="bold"></span></a>
+                <a href="#"><span class="fa fa-underline" id="underline"></span></a>
+                <a href="#"><span class="fa fa-outdent" id="outdent"></span></a>
+                <a href="#"><span class="fa fa-indent" id="indent"></span></a>
+                <a href="#"><span class="fa fa-align-left" id="justify-left"></span></a>
+                <a href="#"><span class="fa fa-align-center" id="justify-center"></span></a>
+                <a href="#"><span class="fa fa-align-right" id="justify-right"></span></a>
+                <a href="#"><span class="fa fa-table" id="table"></span></a>
+            </div>
+            <h3>Dimensions</h3>
+            <div class="collapsible-content dimensions">
+                <div id="sliderHeight">
+                  <div id="custom-handle" class="ui-slider-handle"></div>
+                </div>
+                <div id="sliderWidth" style="margin-top: 20px;">
+                  <div id="custom-handle" class="ui-slider-handle"></div>
+                </div>
+            </div>
+            <h3>Video</h3>
+            <div class="collapsible-content video">
+                {{#each media}}
+                    {{#if isVideo filename=file}}
+                        <a href="#" data-id="{{_id}}" data-file="{{file}}" class="thumbnail" id="thumbnail-video">
+                            <video>
+                              <source src="http://joduplessis.com/massive/{{file}}">
+                            </video>
+                        </a>
+                    {{/if}}
+                {{/each}}
+                <br style="clear:both;"/>
+            </div>
+            <h3>Image</h3>
+            <div class="collapsible-content image">
+                {{#each media}}
+                    {{#if isImage filename=file}}
+                        <a href="#" data-id="{{_id}}" data-file="{{file}}" class="thumbnail" id="thumbnail-image">
+                            <img src="http://joduplessis.com/massive/{{file}}"/>
+                        </a>
+                    {{/if}}
+                {{/each}}
+                <br style="clear:both;"/>
+            </div>
+            <h3>Choice</h3>
+            <div class="collapsible-content choice">
+                <div class="disable"></div>
+                <table width="100%">
+                    <tr><th align="left">Choice</th><th align="right">Correct</th></tr>
+                </table>
+                <table id="choice">
+                    <tr><td><input type="text" /></td><td align="right" width="15%"><input type="radio" name="choice"/></td></tr>
+                    <tr><td><input type="text" /></td><td align="right" width="15%"><input type="radio" name="choice"/></td></tr>
+                    <tr><td><input type="text" /></td><td align="right" width="15%"><input type="radio" name="choice"/></td></tr>
+                    <tr><td><input type="text" /></td><td align="right" width="15%"><input type="radio" name="choice"/></td></tr>
+                    <tr><td><input type="text" /></td><td align="right" width="15%"><input type="radio" name="choice"/></td></tr>
+                </table>
+                <input type="button" id="choice-update" value="Save" />
+            </div>
+            <h3>Bounce</h3>
+            <div class="collapsible-content bounce">
+                <div class="disable"></div>
+                <div id="sliderBounce">
+                  <div id="custom-handle" class="ui-slider-handle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main activities">
+        <form>
+        <div class="pre-header">
+            <a href="javascript:window.history.back();" class="back"><span class="fa fa-chevron-left"></span> Go back</a> <strong>{{title}} </strong>{{activities.title}}
+        </div>
+        <div class="header">
+            <div class="inner">
+                <input type="text" value="{{activities.title}}" name="title">
+                <input type="button" value="Delete" id="delete"/>
+                <input type="submit" value="Save" id="save"/>
+            </div>
+        </div>
+        <div class="primary full">
+            <div class="panel">
+                <div class="padding">
+                    <ul class="widgets">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</template>

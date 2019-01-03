@@ -1,0 +1,45 @@
+<template name="AttributeView">
+    <div class="navigation">
+        {{> Navigation }}
+    </div>
+    <div class="main">
+        <form>
+            <div class="pre-header">
+                <a href="javascript:window.history.back();" class="back"><span class="fa fa-chevron-left"></span> Go back</a> <strong>{{attribute.title}} </strong>
+            </div>
+            <div class="header">
+                <div class="inner">
+                    <input type="text" value="{{attribute.title}}" name="title"/>
+                    <input type="submit" value="Save" />
+                </div>
+            </div>
+            <div class="primary">
+                <div class="panel">
+                    <div class="heading">
+                        <h2>Description</h2>
+                    </div>
+                    <div class="padding">
+                        <textarea name="description">{{attribute.description}}</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="secondary">
+                <div class="panel">
+                    <div class="heading">
+                        <h2>Image</h2>
+                    </div>
+                    <div class="padding">
+                        {{#each media}}
+                            {{#if isImage filename=file}}
+                                <a href="#" id="media-chooser" data-id="{{_id}}" data-file="{{file}}" class="media-chooser attributes">
+                                    <img src="http://joduplessis.com/massive/{{file}}" height="50" width="50"/>
+                                </a>
+                            {{/if}}
+                        {{/each}}
+                        <br style="clear:both;"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</template>

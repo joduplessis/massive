@@ -1,0 +1,51 @@
+<template name="UserList">
+    <div class="navigation">
+        {{> Navigation }}
+    </div>
+    <div class="main">
+        <div class="pre-header">
+            User data is synced with Active Directory.
+        </div>
+        <div class="header">
+            <div class="inner">
+                <input type="text" value="New user" id="add-user-text" />
+                <input type="button" value="Add" id="add-user-add" />
+            </div>
+        </div>
+        <div class="padding">
+        {{#if size}}
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                    <th width="50"></th>
+                    <th>Full name</th>
+                    <th>Play name</th>
+                    <th>Avatar</th>
+                    <th>Email</th>
+                    <th>Date Created</th>
+                    <th>Role</th>
+                    <th width="90"></th>
+                </tr>
+                {{#each rows}}
+                <tr>
+                    <td><span class="profile-pic"><img src="/images/avatars/{{avatar}}.png"/></span></td>
+                    <td><strong>{{fullname}}</strong></td>
+                    <td>{{playname}}</td>
+                    <td>{{avatar}}</td>
+                    <td>{{email}}</td>
+                    <td>{{shortenDateObject object=createdAt}}</td>
+                    <td>{{sentenceCase object=role}}</td>
+                    <td align="right">
+                        <a href="javascript:void(0)" id="view" data-id="{{_id}}" class="button"><span class="fa fa-edit"></span></a>
+                        <a href="javascript:void(0)" id="delete" data-id="{{_id}}" class="button delete"><span class="fa fa-trash-o"></span></a>
+                    </td>
+                </tr>
+                {{/each}}
+            </table>
+        {{else}}
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="noresults">
+                <tr><td>Sorry, there are no results.</td></tr>
+            </table>
+        {{/if}}
+    </div>
+    </div>
+</template>

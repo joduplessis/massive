@@ -1,0 +1,42 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    border: 0px;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    font-weight: 300;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.content {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.padding {
+    padding: 20px;
+    position: relative;
+}
+
+.progress {
+    background: black;
+    height: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background: url(/images/gradient.jpg);
+}

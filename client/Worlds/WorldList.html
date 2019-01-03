@@ -1,0 +1,61 @@
+<template name="WorldList">
+    <div class="navigation">
+        {{> Navigation }}
+    </div>
+    <div class="main">
+        <div class="pre-header">
+            Log into the game to edit worlds.
+        </div>
+        <div class="header">
+            <div class="inner">
+                <input type="text" value="New world" id="add-world-text" />
+                <input type="button" value="Add" id="add-world-add" />
+            </div>
+        </div>
+        <h1>Worlds</h1>
+        <div class="primary full">
+            <div class="panel">
+                {{#if size}}
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>World</th>
+                            <th>Created</th>
+                            <th>Description</th>
+                            <th>Published</th>
+                            <th>Private</th>
+                            <th>Camera</th>
+                            <th width="130"></th>
+                        </tr>
+                        {{#each rows}}
+                        <tr>
+                            <td><span class="world-pic"><img src="{{image}}"/></span></td>
+                            <td>
+                                {{#if start}}
+                                    <span class="fa fa-world-marker"></span>
+                                {{/if}}
+                            </td>
+                            <td>{{title}}</td>
+                            <td>{{ shortenDateObject object=createdAt }}</td>
+                            <td>{{description}}</td>
+                            <td></td>
+                            <td></td>
+                            <td>{{ sentenceCase object=camera }}</td>
+                            <td align="right">
+                                <a href="javascript:void(0)" id="builder" data-id="{{_id}}" class="button"><span class="fa fa-cubes"></span></a>
+                                <a href="javascript:void(0)" id="view" data-id="{{_id}}" class="button"><span class="fa fa-edit"></span></a>
+                                <a href="javascript:void(0)" id="delete" data-id="{{_id}}" class="button delete"><span class="fa fa-trash-o"></span></a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </table>
+                {{else}}
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="noresults">
+                        <tr><td>Sorry, there are player worlds yet.</td></tr>
+                    </table>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</template>

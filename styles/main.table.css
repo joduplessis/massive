@@ -1,0 +1,104 @@
+
+    .main table {
+    }
+
+    .main table tr {
+        background: #fff;
+    }
+
+    .main table tr td a {
+        font-size: 15px;
+        padding-left: 10px;
+        color: #bbbbbb;
+        cursor: pointer;
+    }
+
+    .main table tr th {
+        vertical-align: middle;
+        text-align: left;
+        height: auto;
+        position: relative;
+        font-size: 10px;
+        padding:15px;
+        font-weight: bold;
+        background: #FCFCFC;
+        color: #CCC;
+        border-bottom: 1px solid #EFEFEF;
+        text-transform: uppercase;
+    }
+
+    .main table tr td {
+        vertical-align: top;
+        border-bottom: 1px solid #edf0f1;
+        height: auto;
+        position: relative;
+        font-size: 13px;
+        color: #949c9e;
+        vertical-align: middle;
+        padding: 15px;
+    }
+
+
+      .main table tr td strong {
+          color: #949c9e;
+      }
+
+        .main table tr td .progress {
+            background: url(images/gradient.jpg) repeat-y left;
+            font-size: 10px;
+            border-radius: 5px;
+            position: relative;
+            font-weight: bold;
+            padding: 3px;
+            top: 3px;
+            display: inline-block;
+            color: white;
+        }
+
+        .main table tr td span.profile-pic,
+        .main table tr td span.world-pic {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            overflow: hidden;
+            border-radius: 35px;
+            position: relative;
+            top: 0px;
+            margin-right: -20px;
+        }
+
+
+            .main table tr td span.profile-pic img,
+            .main table tr td span.world-pic img {width: 100%; height: 100%;}
+
+        .main table tr td a.button {
+        }
+
+            .main table tr td a.button span.fa {
+                position: relative;
+                font-size: 18px;
+                color: #CDCFD2;
+            }
+
+            .main table tr td a.button.delete:hover span.fa{ color: #CA472A; }
+            .main table tr td a.button:hover span.fa{ color: #2D3F4D; }
+
+
+
+  .main table tr td .content-tooltip {
+    color: #cccccc;
+    font-size: 12px;
+    font-style: italic;
+    float: right;
+  }
+
+  .main table.reward tr:hover { background: #ffffff; }
+  .main table.reward tr td {  border: none; padding:5px; }
+  .main table.reward tr:last-child td { border-bottom: none; }
+  .main table.reward tr { border: none; }
+  .main table.reward tr td span { color: #aaa; font-size: 12px; }
+
+  .main table.choice tr:hover { background: #ffffff; }
+  .main table.choice tr td {  border: none; padding:5px; }
+  .main table.choice tr:last-child td { border-bottom: none; }
+  .main table.choice tr { border: none; }
